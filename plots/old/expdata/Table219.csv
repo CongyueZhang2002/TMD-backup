@@ -1,0 +1,20 @@
+#: table_doi: 10.17182/hepdata.13387.v1/t219
+#: name: Table 219
+#: description: Charged pion multiplicity ratio (Krypton/Deuterium) as a function of the formation Length Lc (see text of paper). for NU 20 TO 23.5 GeV.
+
+#: data_file: Table219.yaml
+#: keyword reactions: E- DEUT --> E PI- X | E- DEUT --> E- PI+ X | E+ DEUT --> E+ PI- X | E+ DEUT --> E+ PI+ X | E- KR --> E- PI- X | E- KR --> E- PI+ X | E+ KR --> E+ PI- X | E+ KR --> E+ PI+ X | E- NUCLEUS --> E- PI+ X | E+ NUCLEUS --> E+ PI+ X | E- NUCLEUS --> E- PI- X | E+ NUCLEUS --> E+ PI- X
+#: keyword observables: MULT
+#: keyword phrases: Inclusive | Electron production | Neutral Current | Deep Inelastic Scattering
+#: RE(Q=DEUT),E+- DEUT --> E+- (PI+ + PI-) X
+#: NU [GEV],20 TO 23.5
+#: E(P=1) [GeV],27.6
+#: RE(Q=KR),E+- KR --> E+- (PI+ + PI-) X
+NU*(1-Z)*Z**0.35 [FM],"MULT(P=3,Q=KR)/MULT(P=3,Q=DEUT)",stat +,stat -,sys +,sys -
+9.96,0.872,0.008,-0.008,0.014,-0.014
+9.74,0.871,0.012,-0.012,0.011,-0.011
+8.99,0.869,0.017,-0.017,0.01,-0.01
+7.9,0.849,0.023,-0.023,0.01,-0.01
+6.53,0.854,0.032,-0.032,0.013,-0.013
+5.21,0.729,0.083,-0.083,0.018,-0.018
+

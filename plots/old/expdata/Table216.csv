@@ -1,0 +1,22 @@
+#: table_doi: 10.17182/hepdata.13387.v1/t216
+#: name: Table 216
+#: description: Charged pion multiplicity ratio (Neon/Deuterium) as a function of the formation Length Lc (see text of paper). for NU 14 TO 17 GeV.
+
+#: data_file: Table216.yaml
+#: keyword reactions: E- DEUT --> E PI- X | E- DEUT --> E- PI+ X | E+ DEUT --> E+ PI- X | E+ DEUT --> E+ PI+ X | E- NE --> E- PI- X | E- NE --> E- PI+ X | E+ NE --> E+ PI- X | E+ NE --> E+ PI+ X | E- NUCLEUS --> E- PI+ X | E+ NUCLEUS --> E+ PI+ X | E- NUCLEUS --> E- PI- X | E+ NUCLEUS --> E+ PI- X
+#: keyword observables: MULT
+#: keyword phrases: Inclusive | Electron production | Neutral Current | Deep Inelastic Scattering
+#: RE(Q=DEUT),E+- DEUT --> E+- (PI+ + PI-) X
+#: NU [GEV],14 TO 17
+#: E(P=1) [GeV],27.6
+#: RE(Q=NE),E+- NE --> E+- (PI+ + PI-) X
+NU*(1-Z)*Z**0.35 [FM],"MULT(P=3,Q=NE)/MULT(P=3,Q=DEUT)",stat +,stat -,sys +,sys -
+7.16,0.904,0.005,-0.005,0.024,-0.024
+6.99,0.892,0.007,-0.007,0.018,-0.018
+6.46,0.878,0.009,-0.009,0.012,-0.012
+5.68,0.889,0.012,-0.012,0.009,-0.009
+4.68,0.899,0.015,-0.015,0.012,-0.012
+3.53,0.911,0.018,-0.018,0.017,-0.017
+2.24,0.946,0.024,-0.024,0.041,-0.041
+0.92,0.856,0.036,-0.036,0.035,-0.035
+

@@ -1,0 +1,23 @@
+#: table_doi: 10.17182/hepdata.13387.v1/t157
+#: name: Table 157
+#: description: Charged pion multiplicity ratio(Helium/Deuterium) as a function of PT**2 for NU 17 TO 23.5 GeV.
+
+#: data_file: Table157.yaml
+#: keyword reactions: E- DEUT --> E PI- X | E- DEUT --> E- PI+ X | E+ DEUT --> E+ PI- X | E+ DEUT --> E+ PI+ X | E- HE --> E- PI- X | E- HE --> E- PI+ X | E+ HE --> E+ PI- X | E+ HE --> E+ PI+ X
+#: keyword observables: MULT
+#: keyword phrases: Inclusive | Electron production | Neutral Current | Deep Inelastic Scattering
+#: RE(Q=DEUT),,,E+- DEUT --> E+- (PI+ + PI-) X
+#: NU [GEV],,,17 TO 23.5
+#: E(P=1) [GeV],,,27.6
+#: RE(Q=HE),,,E+- HE --> E+- (PI+ + PI-) X
+PT**2 [GEV**2],PT**2 [GEV**2] LOW,PT**2 [GEV**2] HIGH,"MULT(P=3,Q=HE)/MULT(P=3,Q=DEUT)",stat +,stat -,sys +,sys -
+0.027,0.0,0.05,0.956,0.015,-0.015,0.028,-0.028
+0.075,0.05,0.1,0.966,0.015,-0.015,0.028,-0.028
+0.189,0.1,0.3,0.961,0.008,-0.008,0.032,-0.032
+0.385,0.3,0.5,0.966,0.013,-0.013,0.028,-0.028
+0.586,0.5,0.7,0.974,0.02,-0.02,0.028,-0.028
+0.787,0.7,0.9,0.972,0.03,-0.03,0.028,-0.028
+0.988,0.9,1.1,0.979,0.044,-0.044,0.027,-0.027
+1.225,1.1,1.4,0.974,0.053,-0.053,0.028,-0.028
+1.796,1.4,1.95,0.928,0.062,-0.062,0.027,-0.027
+

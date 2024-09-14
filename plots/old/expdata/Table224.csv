@@ -1,0 +1,20 @@
+#: table_doi: 10.17182/hepdata.13387.v1/t224
+#: name: Table 224
+#: description: Charged pion multiplicity ratio (Xenon/Deuterium) as a function of the formation Length Lc (see text of paper). for NU 20 TO 23.5 GeV.
+
+#: data_file: Table224.yaml
+#: keyword reactions: E- DEUT --> E PI- X | E- DEUT --> E- PI+ X | E+ DEUT --> E+ PI- X | E+ DEUT --> E+ PI+ X | E- XE --> E- PI- X | E- XE --> E- PI+ X | E+ XE --> E+ PI- X | E+ XE --> E+ PI+ X | E- NUCLEUS --> E- PI+ X | E+ NUCLEUS --> E+ PI+ X | E- NUCLEUS --> E- PI- X | E+ NUCLEUS --> E+ PI- X
+#: keyword observables: MULT
+#: keyword phrases: Inclusive | Electron production | Neutral Current | Deep Inelastic Scattering
+#: RE(Q=DEUT),E+- DEUT --> E+- (PI+ + PI-) X
+#: NU [GEV],20 TO 23.5
+#: E(P=1) [GeV],27.6
+#: RE(Q=XE),E+- XE --> E+- (PI+ + PI-) X
+NU*(1-Z)*Z**0.35 [FM],"MULT(P=3,Q=XE)/MULT(P=3,Q=DEUT)",stat +,stat -,sys +,sys -
+9.96,0.847,0.01,-0.01,0.014,-0.014
+9.74,0.825,0.015,-0.015,0.012,-0.012
+9.01,0.807,0.021,-0.021,0.011,-0.011
+7.9,0.79,0.028,-0.028,0.011,-0.011
+6.52,0.768,0.038,-0.038,0.014,-0.014
+5.19,0.805,0.114,-0.114,0.02,-0.02
+

@@ -1,0 +1,22 @@
+#: table_doi: 10.17182/hepdata.13387.v1/t212
+#: name: Table 212
+#: description: Charged pion multiplicity ratio (Helium/Deuterium) as a function of the formation Length Lc (see text of paper). for NU 11 TO 14 GeV.
+
+#: data_file: Table212.yaml
+#: keyword reactions: E- DEUT --> E PI- X | E- DEUT --> E- PI+ X | E+ DEUT --> E+ PI- X | E+ DEUT --> E+ PI+ X | E- HE --> E- PI- X | E- HE --> E- PI+ X | E+ HE --> E+ PI- X | E+ HE --> E+ PI+ X
+#: keyword observables: MULT
+#: keyword phrases: Inclusive | Electron production | Neutral Current | Deep Inelastic Scattering
+#: RE(Q=DEUT),E+- DEUT --> E+- (PI+ + PI-) X
+#: NU [GEV],11 TO 14
+#: E(P=1) [GeV],27.6
+#: RE(Q=HE),E+- HE --> E+- (PI+ + PI-) X
+NU*(1-Z)*Z**0.35 [FM],"MULT(P=3,Q=HE)/MULT(P=3,Q=DEUT)",stat +,stat -,sys +,sys -
+5.79,0.944,0.008,-0.008,0.02,-0.02
+5.64,0.953,0.01,-0.01,0.019,-0.019
+5.22,0.973,0.013,-0.013,0.017,-0.017
+4.59,0.965,0.016,-0.016,0.015,-0.015
+3.79,0.981,0.02,-0.02,0.013,-0.013
+2.86,0.978,0.023,-0.023,0.018,-0.018
+1.82,1.021,0.029,-0.029,0.035,-0.035
+0.59,0.864,0.033,-0.033,0.023,-0.023
+

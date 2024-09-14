@@ -1,0 +1,22 @@
+#: table_doi: 10.17182/hepdata.13387.v1/t192
+#: name: Table 192
+#: description: Charged pion multiplicity ratio (Neon/Deuterium) as a function of NU for PT**2 > 0.7 GeV**2.
+
+#: data_file: Table192.yaml
+#: keyword reactions: E- DEUT --> E PI- X | E- DEUT --> E- PI+ X | E+ DEUT --> E+ PI- X | E+ DEUT --> E+ PI+ X | E- NE --> E- PI- X | E- NE --> E- PI+ X | E+ NE --> E+ PI- X | E+ NE --> E+ PI+ X | E- NUCLEUS --> E- PI+ X | E+ NUCLEUS --> E+ PI+ X | E- NUCLEUS --> E- PI- X | E+ NUCLEUS --> E+ PI- X
+#: keyword observables: MULT
+#: keyword phrases: Inclusive | Electron production | Neutral Current | Deep Inelastic Scattering
+#: PT**2 [GEV**2],,,> 0.7
+#: RE(Q=DEUT),,,E+- DEUT --> E+- (PI+ + PI-) X
+#: E(P=1) [GeV],,,27.6
+#: RE(Q=NE),,,E+- NE --> E+- (PI+ + PI-) X
+NU [GEV],NU [GEV] LOW,NU [GEV] HIGH,"MULT(P=3,Q=NE)/MULT(P=3,Q=DEUT)",stat +,stat -,sys +,sys -
+7.05,6.0,8.0,1.005,0.051,-0.051,0.03,-0.03
+9.05,8.0,10.0,0.952,0.039,-0.039,0.028,-0.028
+11.05,10.0,12.0,0.955,0.033,-0.033,0.028,-0.028
+13.05,12.0,14.0,0.987,0.029,-0.029,0.029,-0.029
+15.04,14.0,16.0,0.903,0.024,-0.024,0.026,-0.026
+17.02,16.0,18.0,0.932,0.023,-0.023,0.027,-0.027
+19.0,18.0,20.0,0.927,0.023,-0.023,0.027,-0.027
+21.66,20.0,23.5,0.962,0.021,-0.021,0.028,-0.028
+

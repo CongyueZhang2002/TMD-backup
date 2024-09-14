@@ -1,0 +1,53 @@
+                              chi2:     0.000
+          total num of data in fit:    0
+              number of parameters:   12
+                          chi2/dof:    -0.000
+ -------------------------
+                 fitted parameters:
+ -------------------------
+ RHIC(Ratio) Au going:   0.0000000000000000                0
+ RHIC(Ratio) p going:   0.0000000000000000                0
+ ATLAS5 Y1:   0.0000000000000000                0
+ NORMALIZATION:                       NaN
+ ATLAS5 Y2:   0.0000000000000000                0
+ NORMALIZATION:                       NaN
+ ATLAS5 Y3:   0.0000000000000000                0
+ NORMALIZATION:                       NaN
+ CMS5:   0.0000000000000000                0
+ NORMALIZATION:                       NaN
+ E866 (Q bins):   0.0000000000000000                0
+ E772 (800 GeV):   0.0000000000000000                0
+ HERMES (SIDIS):   0.0000000000000000                0
+ HERMES z
+ HERMES (PIP Z-He):   0.0000000000000000                0
+ HERMES (PIP Z-Ne):   0.0000000000000000                0
+ HERMES (PIP Z-Kr):   0.0000000000000000                0
+ HERMES (PIP Z-XE):   0.0000000000000000                0
+ HERMES (PI0 Z-He):   0.0000000000000000                0
+ HERMES (PI0 Z-Ne):   0.0000000000000000                0
+ HERMES (PI0 Z-Kr):   0.0000000000000000                0
+ HERMES (PI0 Z-XE):   0.0000000000000000                0
+ HERMES (PIM Z-He):   0.0000000000000000                0
+ HERMES (PIM Z-Ne):   0.0000000000000000                0
+ HERMES (PIM Z-Kr):   0.0000000000000000                0
+ HERMES (PIM Z-XE):   0.0000000000000000                0
+ HERMES PT2
+ HERMES (PIP Nu-He):   0.0000000000000000                0
+ HERMES (PIP Nu-NE):   0.0000000000000000                0
+ HERMES (PIP Nu-KR):   0.0000000000000000                0
+ HERMES (PIP Nu-XE):   0.0000000000000000                0
+ HERMES (PI0 Nu-He):   0.0000000000000000                0
+ HERMES (PI0 Nu-NE):   0.0000000000000000                0
+ HERMES (PI0 Nu-KR):   0.0000000000000000                0
+ HERMES (PI0 Nu-XE):   0.0000000000000000                0
+ HERMES (PIM Nu-He):   0.0000000000000000                0
+ HERMES (PIM Nu-NE):   0.0000000000000000                0
+ HERMES (PIM Nu-KR):   0.0000000000000000                0
+ HERMES (PIM Nu-XE):   0.0000000000000000                0
+ JLAB2022 (PIP):   0.0000000000000000                0
+ JLAB2022 (PIP):   0.0000000000000000                0
+ JLAB2022 (PIP):   0.0000000000000000                0
+ JLAB2022 (PIM):   0.0000000000000000                0
+ JLAB2022 (PIM):   0.0000000000000000                0
+ JLAB2022 (PIM):   0.0000000000000000                0
+

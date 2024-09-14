@@ -1,0 +1,38 @@
+This example generates the nTMDs for HE and XE.
+
+Currently Available nTMPDFs
+- HE (A=4)
+- BE (A=9)
+- NE (A=20)
+- FE (A=56)
+- KR (A=84)
+- XE (A=131)
+- W (A=184)
+
+Currently Available nTMDFFs
+- HE (A=4)
+- NE (A=20)
+- KR (A=84)
+- XE (A=131)
+
+To change which nucleus is outputted, go to example.f
+Set Nucleus1 and Nucleus2 by MASS NUMBER
+I.e., for He and Xe
+Nucleus1 = 4
+Nucleus2 = 131
+
+
+To generate the nTMDs use:
+make clean
+make
+./example.out
+
+Plots:
+For 2D Plots use:
+python nTMD_Plots
+
+For 3D Plots of the nTMDPDFs use:
+python nTMDPDF_3D.py
+
+For 3D Plots of the nTMDFFs use:
+python nTMDFF_3D.py

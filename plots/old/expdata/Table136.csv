@@ -1,0 +1,22 @@
+#: table_doi: 10.17182/hepdata.13387.v1/t136
+#: name: Table 136
+#: description: Charged pion multiplicity ratio (Krypton/Deuterium) as a function of Q**2 for Z > 0.7.
+
+#: data_file: Table136.yaml
+#: keyword reactions: E- DEUT --> E PI- X | E- DEUT --> E- PI+ X | E+ DEUT --> E+ PI- X | E+ DEUT --> E+ PI+ X | E- KR --> E- PI- X | E- KR --> E- PI+ X | E+ KR --> E+ PI- X | E+ KR --> E+ PI+ X | E- NUCLEUS --> E- PI+ X | E+ NUCLEUS --> E+ PI+ X | E- NUCLEUS --> E- PI- X | E+ NUCLEUS --> E+ PI- X
+#: keyword observables: MULT
+#: keyword phrases: Inclusive | Electron production | Neutral Current | Deep Inelastic Scattering
+#: RE(Q=DEUT),,,E+- DEUT --> E+- (PI+ + PI-) X
+#: Z,,,> 0.7
+#: E(P=1) [GeV],,,27.6
+#: RE(Q=KR),,,E+- KR --> E+- (PI+ + PI-) X
+Q**2 [GEV**2],Q**2 [GEV**2] LOW,Q**2 [GEV**2] HIGH,"MULT(P=3,Q=KR)/MULT(P=3,Q=DEUT)",stat +,stat -,sys +,sys -
+1.38,1.0,1.5,0.692,0.009,-0.009,0.037,-0.037
+1.91,1.5,2.0,0.652,0.01,-0.01,0.035,-0.035
+2.65,2.0,3.0,0.625,0.01,-0.01,0.032,-0.032
+3.74,3.0,4.0,0.627,0.014,-0.014,0.029,-0.029
+4.8,4.0,5.0,0.64,0.02,-0.02,0.029,-0.029
+5.79,5.0,6.0,0.67,0.028,-0.028,0.029,-0.029
+7.19,6.0,8.0,0.67,0.03,-0.03,0.028,-0.028
+9.84,8.0,25.0,0.702,0.048,-0.048,0.03,-0.03
+

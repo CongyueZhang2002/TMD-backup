@@ -1,0 +1,40 @@
+if [ $USER == 'jdterry' ]
+then
+
+rt=~/"backup-jdterry/share/LHAPDF/"
+
+else
+
+rt=~/"share/LHAPDF/"
+
+fi
+
+cd $rt
+rm -rf EPPS16PR
+rm -rf EPPS16AU
+rm -rf EPPS16BE
+rm -rf EPPS16FE
+rm -rf EPPS16HE
+rm -rf EPPS16JCC
+rm -rf EPPS16JFE
+rm -rf EPPS16JPB
+rm -rf EPPS16KR
+rm -rf EPPS16NE
+rm -rf EPPS16WW
+rm -rf EPPS16XE
+rm -rf EPPS16CA
+
+cd -
+cp -r EPPS16/EPPS16PR  "$rt/EPPS16PR"
+cp -r EPPS16/EPPS16AU  "$rt/EPPS16AU"
+cp -r EPPS16/EPPS16BE  "$rt/EPPS16BE"
+cp -r EPPS16/EPPS16FE  "$rt/EPPS16FE"
+cp -r EPPS16/EPPS16HE  "$rt/EPPS16HE"
+cp -r EPPS16/EPPS16JCC "$rt/EPPS16JCC"
+cp -r EPPS16/EPPS16JFE "$rt/EPPS16JFE"
+cp -r EPPS16/EPPS16JPB "$rt/EPPS16JPB"
+cp -r EPPS16/EPPS16KR  "$rt/EPPS16KR"
+cp -r EPPS16/EPPS16NE  "$rt/EPPS16NE"
+cp -r EPPS16/EPPS16WW  "$rt/EPPS16WW"
+cp -r EPPS16/EPPS16XE  "$rt/EPPS16XE"
+cp -r EPPS16/EPPS16CA  "$rt/EPPS16CA"

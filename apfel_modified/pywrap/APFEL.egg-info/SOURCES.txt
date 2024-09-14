@@ -1,0 +1,7 @@
+apfel.py
+setup.py
+./apfel_wrap.cc
+APFEL.egg-info/PKG-INFO
+APFEL.egg-info/SOURCES.txt
+APFEL.egg-info/dependency_links.txt
+APFEL.egg-info/top_level.txt

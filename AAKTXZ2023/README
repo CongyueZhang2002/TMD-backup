@@ -1,0 +1,35 @@
+To make the FIT replicas from scratch:
+./make_reps.x
+
+To run the FIT replicas use:
+./rep_fit.x
+
+To make the PREDICT replicas from scratch:
+./make_reps_pred.x
+
+To make the COLLINEAR UNCERTAINTY replicas from scratch:
+./make_reps_col.x
+
+To update the main routine to FIT in each replica use:
+./cp_fits.x
+
+To update the main routine to PREDICT in each replica use:
+./cp_predicts.x
+
+To remove the replicas use:
+./rm_reps.x
+
+To update readdatas use:
+./copy_readdatas.py
+
+To collect the chi2 and parameter values from each FIT replica use:
+python collect_results.py 
+
+To collect all plot data into plots/data_reps use:
+./collect_reps.x
+
+To collect all plot data into plots/data_reps_col use:
+./collect_reps_col.x
+
+To update the subroutines, you only need to modify the subroutine files in
+the fit directory.

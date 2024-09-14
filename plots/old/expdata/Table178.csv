@@ -1,0 +1,21 @@
+#: table_doi: 10.17182/hepdata.13387.v1/t178
+#: name: Table 178
+#: description: Charged pion multiplicity ratio(Xenon/Deuterium) as a function of Z for NU 17 TO 23.5 GeV.
+
+#: data_file: Table178.yaml
+#: keyword reactions: E- DEUT --> E PI- X | E- DEUT --> E- PI+ X | E+ DEUT --> E+ PI- X | E+ DEUT --> E+ PI+ X | E- XE --> E- PI- X | E- XE --> E- PI+ X | E+ XE --> E+ PI- X | E+ XE --> E+ PI+ X | E- NUCLEUS --> E- PI+ X | E+ NUCLEUS --> E+ PI+ X | E- NUCLEUS --> E- PI- X | E+ NUCLEUS --> E+ PI- X
+#: keyword observables: MULT
+#: keyword phrases: Inclusive | Electron production | Neutral Current | Deep Inelastic Scattering
+#: RE(Q=DEUT),,,E+- DEUT --> E+- (PI+ + PI-) X
+#: NU [GEV],,,17 TO 23.5
+#: E(P=1) [GeV],,,27.6
+#: RE(Q=XE),,,E+- XE --> E+- (PI+ + PI-) X
+Z,Z LOW,Z HIGH,"MULT(P=3,Q=XE)/MULT(P=3,Q=DEUT)",stat +,stat -,sys +,sys -
+0.25,0.2,0.3,0.822,0.006,-0.006,0.028,-0.028
+0.34,0.3,0.4,0.799,0.008,-0.008,0.025,-0.025
+0.44,0.4,0.5,0.782,0.011,-0.011,0.024,-0.024
+0.55,0.5,0.6,0.761,0.014,-0.014,0.024,-0.024
+0.64,0.6,0.7,0.746,0.02,-0.02,0.024,-0.024
+0.74,0.7,0.8,0.692,0.027,-0.027,0.024,-0.024
+0.82,0.8,0.9,0.711,0.063,-0.063,0.038,-0.038
+

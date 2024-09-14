@@ -1,0 +1,60 @@
+#! /usr/bin/env python
+
+from distutils.core import setup, Extension
+import os
+import subprocess
+
+longdesc = """This is a simple SWIG wrapper on the main steering interface of
+the APFEL library. It is used to create, query and use the APFEL data from 
+a Python program.
+"""
+
+## Extension definition
+import os
+wrapsrc = '@srcdir@/apfel_wrap.cc'
+incdir_src = os.path.abspath('@top_srcdir@/include')
+incdir_build = os.path.abspath('@top_builddir@/include')
+libdir = os.path.abspath('@top_builddir@/lib')
+cxxargs = '@CXXFLAGS@'.split()
+ldargs = '@LDFLAGS@'.split()
+
+def get_status_output(*args):
+    p = subprocess.Popen(*args, stdout=subprocess.PIPE,stderr=subprocess.PIPE, shell=True)
+    stdout, stderr = p.communicate()
+    return p.returncode, stdout
+
+status, result = get_status_output(["lhapdf-config","--version"])
+if status == 0:
+    lhapdfdir = os.popen('lhapdf-config --libdir').read()
+    ext = Extension('_apfel',
+                [wrapsrc],
+                include_dirs=[incdir_src, incdir_build],
+                library_dirs=[libdir, os.path.join(libdir,'.libs'), lhapdfdir.replace('\n','')],
+                extra_compile_args = cxxargs,
+                extra_link_args = ldargs,
+                libraries=['APFEL','LHAPDF'])
+else:    
+    ext = Extension('_apfel',
+                [wrapsrc],
+                include_dirs=[incdir_src, incdir_build],
+                library_dirs=[libdir, os.path.join(libdir,'.libs')],
+                extra_compile_args = cxxargs,
+                extra_link_args = ldargs,
+                libraries=['APFEL'])
+
+## Setup definition
+setup(name = 'APFEL',
+      version = '@PACKAGE_VERSION@',
+      #include_package_data = True,
+      ext_modules=[ext],
+      py_modules = ['apfel'],
+
+      author = ['Valerio Bertone'],
+      author_email = 'valerio.bertone@cern.ch',
+      url = 'https://github.com/vbertone/apfel',
+      description = 'A PDF Evolution Library',
+      long_description = longdesc,
+      keywords = 'PDFs, FFs, DGLAP, DIS, structure functions',
+      license = 'GPL',
+      )
+

@@ -1,0 +1,22 @@
+#: table_doi: 10.17182/hepdata.13387.v1/t207
+#: name: Table 207
+#: description: Charged pion multiplicity ratio (Xenon/Deuterium) as a function of Q**2 for PT**2 < 0.7 GeV**2.
+
+#: data_file: Table207.yaml
+#: keyword reactions: E- DEUT --> E PI- X | E- DEUT --> E- PI+ X | E+ DEUT --> E+ PI- X | E+ DEUT --> E+ PI+ X | E- XE --> E- PI- X | E- XE --> E- PI+ X | E+ XE --> E+ PI- X | E+ XE --> E+ PI+ X | E- NUCLEUS --> E- PI+ X | E+ NUCLEUS --> E+ PI+ X | E- NUCLEUS --> E- PI- X | E+ NUCLEUS --> E+ PI- X
+#: keyword observables: MULT
+#: keyword phrases: Inclusive | Electron production | Neutral Current | Deep Inelastic Scattering
+#: PT**2 [GEV**2],,,< 0.7
+#: RE(Q=DEUT),,,E+- DEUT --> E+- (PI+ + PI-) X
+#: E(P=1) [GeV],,,27.6
+#: RE(Q=XE),,,E+- XE --> E+- (PI+ + PI-) X
+Q**2 [GEV**2],Q**2 [GEV**2] LOW,Q**2 [GEV**2] HIGH,"MULT(P=3,Q=XE)/MULT(P=3,Q=DEUT)",stat +,stat -,sys +,sys -
+1.39,1.0,1.5,0.715,0.003,-0.003,0.029,-0.029
+1.96,1.5,2.0,0.711,0.004,-0.004,0.028,-0.028
+2.72,2.0,3.0,0.721,0.004,-0.004,0.029,-0.029
+3.82,3.0,4.0,0.743,0.005,-0.005,0.03,-0.03
+4.87,4.0,5.0,0.76,0.007,-0.007,0.03,-0.03
+5.93,5.0,6.0,0.758,0.01,-0.01,0.03,-0.03
+7.33,6.0,8.0,0.759,0.01,-0.01,0.03,-0.03
+9.88,8.0,25.0,0.743,0.016,-0.016,0.03,-0.03
+

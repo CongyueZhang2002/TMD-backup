@@ -1,0 +1,32 @@
+rm *.o
+gfortran  -c example.f ../example/TMDPDF.f ../example/gauss.f ../example/ogata.f ../example/kernel_tmd.f ../example/quadpack.f ../example/common.f readdata.f ../example/sivers.f ../example/TMDFF.f ../example/fDSS.f ../example/FF_NLO.f ../example/PDF_NLO.f ../example/EPPS16.f
+gfortran *.o -o example.out   `lhapdf-config --ldflags`
+LHAPDF 6.2.1 loading /u/home/m/misharya/LHAPDF-6.2.1/../share/LHAPDF/CT14nlo/CT14nlo_0000.dat
+CT14nlo PDF set, member #0, version 1; LHAPDF ID = 13100
+LHAPDF 6.2.1 loading /u/home/m/misharya/LHAPDF-6.2.1/../share/LHAPDF/CT14nlo/CT14nlo_0002.dat
+CT14nlo PDF set, member #2, version 1; LHAPDF ID = 13102
+LHAPDF 6.2.1 loading /u/home/m/misharya/LHAPDF-6.2.1/../share/LHAPDF/EPPS16nlo_CT14nlo_Be9/EPPS16nlo_CT14nlo_Be9_0000.dat
+EPPS16nlo_CT14nlo_Be9 PDF set, member #0, version 1; LHAPDF ID = 900200
+LHAPDF 6.2.1 loading /u/home/m/misharya/LHAPDF-6.2.1/../share/LHAPDF/EPPS16nlo_CT14nlo_Be9/EPPS16nlo_CT14nlo_Be9_0042.dat
+EPPS16nlo_CT14nlo_Be9 PDF set, member #42, version 1; LHAPDF ID = 900242
+LHAPDF 6.2.1 loading /u/home/m/misharya/LHAPDF-6.2.1/../share/LHAPDF/EPPS16nlo_CT14nlo_C12/EPPS16nlo_CT14nlo_C12_0000.dat
+EPPS16nlo_CT14nlo_C12 PDF set, member #0, version 1; LHAPDF ID = 900300
+LHAPDF 6.2.1 loading /u/home/m/misharya/LHAPDF-6.2.1/../share/LHAPDF/EPPS16nlo_CT14nlo_C12/EPPS16nlo_CT14nlo_C12_0042.dat
+EPPS16nlo_CT14nlo_C12 PDF set, member #42, version 1; LHAPDF ID = 900342
+LHAPDF 6.2.1 loading /u/home/m/misharya/LHAPDF-6.2.1/../share/LHAPDF/EPPS16nlo_CT14nlo_Fe56/EPPS16nlo_CT14nlo_Fe56_0000.dat
+EPPS16nlo_CT14nlo_Fe56 PDF set, member #0, version 1; LHAPDF ID = 900600
+LHAPDF 6.2.1 loading /u/home/m/misharya/LHAPDF-6.2.1/../share/LHAPDF/EPPS16nlo_CT14nlo_Fe56/EPPS16nlo_CT14nlo_Fe56_0042.dat
+EPPS16nlo_CT14nlo_Fe56 PDF set, member #42, version 1; LHAPDF ID = 900642
+LHAPDF 6.2.1 loading /u/home/m/misharya/LHAPDF-6.2.1/../share/LHAPDF/EPPS16nlo_CT14nlo_W184/EPPS16nlo_CT14nlo_W184_0000.dat
+EPPS16nlo_CT14nlo_W184 PDF set, member #0, version 1; LHAPDF ID = 901000
+LHAPDF 6.2.1 loading /u/home/m/misharya/LHAPDF-6.2.1/../share/LHAPDF/EPPS16nlo_CT14nlo_W184/EPPS16nlo_CT14nlo_W184_0042.dat
+EPPS16nlo_CT14nlo_W184 PDF set, member #42, version 1; LHAPDF ID = 901042
+LHAPDF 6.2.1 loading /u/home/m/misharya/LHAPDF-6.2.1/../share/LHAPDF/EPPS16nlo_CT14nlo_Au197/EPPS16nlo_CT14nlo_Au197_0000.dat
+EPPS16nlo_CT14nlo_Au197 PDF set, member #0, version 1; LHAPDF ID = 901200
+LHAPDF 6.2.1 loading /u/home/m/misharya/LHAPDF-6.2.1/../share/LHAPDF/EPPS16nlo_CT14nlo_Au197/EPPS16nlo_CT14nlo_Au197_0042.dat
+EPPS16nlo_CT14nlo_Au197 PDF set, member #42, version 1; LHAPDF ID = 901242
+Thanks for using LHAPDF 6.2.1. Please make sure to cite the paper:
+  Eur.Phys.J. C75 (2015) 3, 132  (http://arxiv.org/abs/1412.7420)
+ ERROR IN READING FILE    collected_results.csv                                                   
+ REPLICA_NUM,  EIGENSET:          42           2
+ 1

@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: APFEL
+Version: 3.0.7
+Summary: A PDF Evolution Library
+Home-page: https://github.com/vbertone/apfel
+Author: ['Valerio Bertone']
+Author-email: valerio.bertone@cern.ch
+License: GPL
+Keywords: PDFs,FFs,DGLAP,DIS,structure functions
+
+This is a simple SWIG wrapper on the main steering interface of
+the APFEL library. It is used to create, query and use the APFEL data from 
+a Python program.

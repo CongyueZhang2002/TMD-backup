@@ -1,0 +1,90 @@
+../example/quadpack.f:1122.31:
+
+      if(ier.ne.0) call xerror('abnormal return from dqag ',26,ier,lvl) 
+                               1
+Warning: Character length of actual argument shorter than of dummy argument 'xmess' (26/120) at (1)
+../example/quadpack.f:1775.31:
+
+      if(ier.ne.0) call xerror('abnormal return from dqagi',26,ier,lvl) 
+                               1
+Warning: Character length of actual argument shorter than of dummy argument 'xmess' (26/120) at (1)
+../example/quadpack.f:2560.31:
+
+      if(ier.ne.0) call xerror('abnormal return from dqagp',26,ier,lvl) 
+                               1
+Warning: Character length of actual argument shorter than of dummy argument 'xmess' (26/120) at (1)
+../example/quadpack.f:3202.31:
+
+      if(ier.ne.0) call xerror('abnormal return from dqags',26,ier,lvl) 
+                               1
+Warning: Character length of actual argument shorter than of dummy argument 'xmess' (26/120) at (1)
+../example/quadpack.f:3716.31:
+
+      if(ier.ne.0) call xerror('abnormal return from dqawc',26,ier,lvl) 
+                               1
+Warning: Character length of actual argument shorter than of dummy argument 'xmess' (26/120) at (1)
+../example/quadpack.f:4320.31:
+
+      if(ier.ne.0) call xerror('abnormal return from dqawf',26,ier,lvl) 
+                               1
+Warning: Character length of actual argument shorter than of dummy argument 'xmess' (26/120) at (1)
+../example/quadpack.f:5086.31:
+
+      if(ier.ne.0) call xerror('abnormal return from dqawo',26,ier,lvl) 
+                               1
+Warning: Character length of actual argument shorter than of dummy argument 'xmess' (26/120) at (1)
+../example/quadpack.f:5665.31:
+
+      if(ier.ne.0) call xerror('abnormal return from dqaws',26,ier,lvl) 
+                               1
+Warning: Character length of actual argument shorter than of dummy argument 'xmess' (26/120) at (1)
+../example/quadpack.f:9004.18:
+
+   80 call xerror('abnormal return from dqng ',26,ier,0)                
+                  1
+Warning: Character length of actual argument shorter than of dummy argument 'xmess' (26/120) at (1)
+../example/fDSS.f:151.24:
+
+      UTOT = FINT9(NARG,XT,NA,ARRF,XUTOTF) * (1.D0-X)**4 * X**0.5       
+                        1
+Warning: Actual argument contains too few elements for dummy argument 'arg' (2/5) at (1)
+../example/fDSS.f:152.24:
+
+      DTOT = FINT9(NARG,XT,NA,ARRF,XDTOTF) * (1.D0-X)**4 * X**0.5       
+                        1
+Warning: Actual argument contains too few elements for dummy argument 'arg' (2/5) at (1)
+../example/fDSS.f:153.24:
+
+      STOT = FINT9(NARG,XT,NA,ARRF,XSTOTF) * (1.D0-X)**4 * X**0.5       
+                        1
+Warning: Actual argument contains too few elements for dummy argument 'arg' (2/5) at (1)
+../example/fDSS.f:154.24:
+
+      CTOT = FINT9(NARG,XT,NA,ARRF,XCTOTF) * (1.D0-X)**7 * X**0.3       
+                        1
+Warning: Actual argument contains too few elements for dummy argument 'arg' (2/5) at (1)
+../example/fDSS.f:155.24:
+
+      BTOT = FINT9(NARG,XT,NA,ARRF,XBTOTF) * (1.D0-X)**7 * X**0.3       
+                        1
+Warning: Actual argument contains too few elements for dummy argument 'arg' (2/5) at (1)
+../example/fDSS.f:156.24:
+
+      GL   = FINT9(NARG,XT,NA,ARRF,XGF)    * (1.D0-X)**4 * X**0.3       
+                        1
+Warning: Actual argument contains too few elements for dummy argument 'arg' (2/5) at (1)
+../example/fDSS.f:157.24:
+
+      UVAL = FINT9(NARG,XT,NA,ARRF,XUVALF) * (1.D0-X)**4 * X**0.5       
+                        1
+Warning: Actual argument contains too few elements for dummy argument 'arg' (2/5) at (1)
+../example/fDSS.f:158.24:
+
+      DVAL = FINT9(NARG,XT,NA,ARRF,XDVALF) * (1.D0-X)**4 * X**0.5       
+                        1
+Warning: Actual argument contains too few elements for dummy argument 'arg' (2/5) at (1)
+../example/fDSS.f:159.24:
+
+      SVAL = FINT9(NARG,XT,NA,ARRF,XSVALF) * (1.D0-X)**4 * X**0.5       
+                        1
+Warning: Actual argument contains too few elements for dummy argument 'arg' (2/5) at (1)
