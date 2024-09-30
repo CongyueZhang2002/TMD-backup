@@ -1,6 +1,7 @@
+
 *************************************************************************
 *                                                                                     
-*        DSS14  KAON  HESSIAN SETS   (NLO only)            
+*        DSS17  (PION) KAON  HESSIAN SETS   (NLO only)            
 *                                                                                                                                                                           
 *  D.de Florian, M. Epele, R. Hernadez Pinto R.Sassot, M.Stratmann         
 *                                                  arXiv:1410.6027               
@@ -8,8 +9,8 @@
 *     CALL fDSSH (IS,IL,IC,IO, X, Q2, U, UB, D, DB, S, SB, C, B, GL)               
 *                                                                                                                 
 *  INPUT:    
-*  IS = SET VERSION    0: DSS17  BEST FIT
-*                      +/- 1, +/- 2, ... , +/- 28:  DSS17 VARIATIONS
+*  IS = SET VERSION    0: DSS14  BEST FIT
+*                      +/- 1, +/- 2, ... , +/- 28:  DSS14 VARIATIONS
 *
 *  IL = CL    0: 90% CL
 *             1: 68% CL 
@@ -33,16 +34,16 @@
 *                                                                  
 *                                                                  
 *   COMMON:  The main program or the calling routine has to have   
-*            a common block  COMMON / FRAGINI17 / FINI17 , and  FINI17   
+*            a common block  COMMON / FRAGINI / FINI , and  FINI   
 *            has always to be zero when DSS is called for the      
 *            first time or when the SET has been changed.          
 *                                                                  
 ********************************************************************
 
-      SUBROUTINE fDSSH17(IS,IL,IC,IO, X, Q2, U, UB, D, DB, S, SB,C,B,GL)
+      SUBROUTINE fDSSH(IS,IL,IC,IO, X, Q2, U, UB, D, DB, S, SB,C,B,GL)
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       INTEGER IS
-      INTEGER FINI17,IL
+      INTEGER FINI,IL
       PARAMETER (NPART=9, NX=47, NQ=24, NARG=2)
       DIMENSION XUTOTF(NX,NQ), XDTOTF(NX,NQ), XSTOTF(NX,NQ)
       DIMENSION XUVALF(NX,NQ), XDVALF(NX,NQ), XSVALF(NX,NQ)
@@ -56,12 +57,13 @@
       character *20 fname,file
 
       DATA fname1 / '90ka-plus-','90ka-minu-','68ka-plus-','68ka-minu-'/
+c      DATA fname1 / '90pi-plus-','90pi-minu-','68pi-plus-','68pi-minu-'/
       DATA fname2 / '01','02','03','04','05','06','07','08','09','10',
      1     '11','12','13','14','15','16','17','18','19','20','21','22',
      1     '23','24','25','26','27','28','29','30','31','32','33','34',
      1     '35','36','37','38','39','40'/
       
-      COMMON / FRAGINI17 / FINI17
+      COMMON / FRAGINI / FINI
       SAVE XUTOTF, XDTOTF, XSTOTF, XCTOTF, XBTOTF, XGF, NA, ARRF
       SAVE XUVALF, XDVALF, XSVALF
 *...BJORKEN-X AND Q**2 VALUES OF THE GRID :
@@ -69,6 +71,12 @@
      1           4.0D0, 6.4D0, 1.0D1, 1.5D1, 2.5D1, 4.0D1, 6.4D1,
      2           1.0D2, 1.8D2, 3.2D2, 5.8D2, 1.0D3, 1.8D3,
      3           3.2D3, 5.8D3, 1.0D4, 1.8D4, 3.2D4, 5.8D4, 1.0D5/
+c  old 35
+c        DATA XB / 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09,
+c     4        0.095, 0.1, 0.125, 0.15, 0.175, 0.2, 0.225, 0.25, 0.275,
+c     5        0.3, 0.325, 0.35, 0.375, 0.4, 0.45,  0.5, 0.55,
+c     6        0.6, 0.65,  0.7,  0.75,  0.8, 0.85,  0.9 , 0.93, 1.0/
+c new 47     
        DATA XB /0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09,
      4        0.095, 0.1, 0.125, 0.15, 0.175, 0.2, 0.225, 0.25, 0.275,
      5        0.3, 0.325, 0.35, 0.375, 0.4, 0.425, 0.45, 0.475,  0.5, 
@@ -78,7 +86,7 @@
      
 *...CHECK OF X AND Q2 VALUES : 
        IF ( (X.LT.0.05D0) .OR. (X.GT.1.0D0) ) THEN
-           WRITE(6,91) 
+c           WRITE(6,91) 
   91       FORMAT (2X,'PARTON INTERPOLATION: X OUT OF RANGE')
 C          STOP
        ENDIF
@@ -88,13 +96,15 @@ C          STOP
        ENDIF
 *...INITIALIZATION :
 *    SELECTION AND READING OF THE GRID :
-       IF (FINI17.NE.0) GOTO 16
+       IF (FINI.NE.0) GOTO 16
 
       fname3='.grid'
 
        IF (IS.EQ.0) THEN
        IIREAD=10
-       OPEN(IIREAD,FILE='../fit/TMDs/DSS17_HESSIAN/ka_DSS17.GRID')   
+       OPEN(IIREAD,FILE='KA_2017.GRID')
+c       OPEN(IIREAD,FILE='KANLO_NNPDF30.GRID')
+c       OPEN(IIREAD,FILE='PINLO_NNPDF30.GRID')   
        ELSE
        IIREAD=11          
        IF(IS.GT.0) THEN
@@ -122,7 +132,7 @@ C
   15   CONTINUE
        CLOSE(IIREAD)
 C
-      FINI17 = 1
+      FINI = 1
 *....ARRAYS FOR THE INTERPOLATION SUBROUTINE :
       DO 10 IQ = 1, NQ
       DO 20 IX = 1, NX-1
@@ -160,15 +170,15 @@ C
 *...INTERPOLATION :
       XT(1) = DLOG(X)
       XT(2) = DLOG(Q2)
-      UTOT = FINT17(NARG,XT,NA,ARRF,XUTOTF) * (1.D0-X)**4 * X**0.5
-      DTOT = FINT17(NARG,XT,NA,ARRF,XDTOTF) * (1.D0-X)**4 * X**0.5 
-      STOT = FINT17(NARG,XT,NA,ARRF,XSTOTF) * (1.D0-X)**4 * X**0.5
-      CTOT = FINT17(NARG,XT,NA,ARRF,XCTOTF) * (1.D0-X)**7 * X**0.3
-      BTOT = FINT17(NARG,XT,NA,ARRF,XBTOTF) * (1.D0-X)**7 * X**0.3
-      GL   = FINT17(NARG,XT,NA,ARRF,XGF)    * (1.D0-X)**4 * X**0.3
-      UVAL = FINT17(NARG,XT,NA,ARRF,XUVALF) * (1.D0-X)**4 * X**0.5
-      DVAL = FINT17(NARG,XT,NA,ARRF,XDVALF) * (1.D0-X)**4 * X**0.5 
-      SVAL = FINT17(NARG,XT,NA,ARRF,XSVALF) * (1.D0-X)**4 * X**0.5
+      UTOT = FINT(NARG,XT,NA,ARRF,XUTOTF) * (1.D0-X)**4 * X**0.5
+      DTOT = FINT(NARG,XT,NA,ARRF,XDTOTF) * (1.D0-X)**4 * X**0.5 
+      STOT = FINT(NARG,XT,NA,ARRF,XSTOTF) * (1.D0-X)**4 * X**0.5
+      CTOT = FINT(NARG,XT,NA,ARRF,XCTOTF) * (1.D0-X)**7 * X**0.3
+      BTOT = FINT(NARG,XT,NA,ARRF,XBTOTF) * (1.D0-X)**7 * X**0.3
+      GL   = FINT(NARG,XT,NA,ARRF,XGF)    * (1.D0-X)**4 * X**0.3
+      UVAL = FINT(NARG,XT,NA,ARRF,XUVALF) * (1.D0-X)**4 * X**0.5
+      DVAL = FINT(NARG,XT,NA,ARRF,XDVALF) * (1.D0-X)**4 * X**0.5 
+      SVAL = FINT(NARG,XT,NA,ARRF,XSVALF) * (1.D0-X)**4 * X**0.5
        
        Up  = (UTOT+UVAL)/2.
        UBp = (UTOT-UVAL)/2.
@@ -178,23 +188,23 @@ C
        SBp = (STOT-SVAL)/2.
        Cp  =  CTOT/2.
        Bp  =  BTOT/2.
-
+              
        IF (IC.EQ.1) THEN
        U  = Up
        UB = UBp
-       D  = Dp 
-       DB = DBp
-       S  = Sp
+       D  = UBp 
+       DB = UBp
+       S  = UBp
        SB = SBp
        C  = Cp
        B  = Bp
        ELSEIF (IC.EQ.-1) THEN
        U  = UBp
        UB = Up
-       D  = DBp 
-       DB = Dp
+       D  = UBp 
+       DB = UBp
        S  = SBp
-       SB = Sp
+       SB = UBp
        C  = Cp
        B  = Bp
        ELSEIF (IC.EQ.0) THEN
@@ -206,7 +216,6 @@ C
        SB =  S
        C  =  Cp
        B  =  Bp 
-
        ELSE
          WRITE(6,94)
  94      FORMAT (2X,' WRONG CHARGE')
@@ -217,7 +226,7 @@ C
 *
 *...CERN LIBRARY ROUTINE E104 (INTERPOLATION) :
 *
-      FUNCTION FINT17(NARG,ARG,NENT,ENT,TABLE)
+      FUNCTION FINT(NARG,ARG,NENT,ENT,TABLE)
       IMPLICIT DOUBLE PRECISION (A-H,O-Z)
       DIMENSION ARG(2),NENT(2),ENT(59),TABLE(840)
       DIMENSION D(5),NCOMB(5),IENT(5)
@@ -239,7 +248,7 @@ C
       KD=KD+IENT(I)*M
       M=M*NENT(I)
     5 JA=JB+1
-      FINT17=0.D0
+      FINT=0.D0
    10 FAC=1.D0
       IADR=KD
       IFADR=1
@@ -250,7 +259,7 @@ C
    12 FAC=FAC*D(I)
       IADR=IADR-IFADR
    15 IFADR=IFADR*NENT(I)
-      FINT17=FINT17+FAC*TABLE(IADR)
+      FINT=FINT+FAC*TABLE(IADR)
       IL=NARG
    40 IF (NCOMB(IL).EQ.0) GO TO 80
       NCOMB(IL)=0
@@ -264,4 +273,32 @@ C
       RETURN
       END
       
+c----------------------------------------------------------------------------------------
+      subroutine strcat(str1,str2,str)
+c concatenates str1 and str2 into str. Ignores trailing blanks of str1,str2
+      character *(*) str1,str2,str
+      l1=istrl(str1)
+      l2=istrl(str2)
+      l =len(str)
+      if(l.lt.l1+l2) then
+          write(*,*) 'error: l1+l2>l in strcat'
+          write(*,*) 'l1=',l1,' str1=',str1
+          write(*,*) 'l2=',l2,' str2=',str2
+          write(*,*) 'l=',l
+          stop
+      endif
+      if(l1.ne.0) str(1:l1)=str1(1:l1)
+      if(l2.ne.0) str(l1+1:l1+l2)=str2(1:l2)
+      if(l1+l2+1.le.l) str(l1+l2+1:l)= ' '
+      end
+c
+      function istrl(string)
+c returns the position of the last non-blank character in string
+      character * (*) string
+      i = len(string)
+      dowhile(i.gt.0.and.string(i:i).eq.' ')
+         i=i-1
+      enddo
+      istrl = i
+      end
 c----------------------------------------------------------------------------------------
